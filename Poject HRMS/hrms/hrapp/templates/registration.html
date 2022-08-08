@@ -1,0 +1,69 @@
+{% extends "main.html" %}
+{% block body %}
+<h3 style="color: red ; margin: 0px auto;">Fill This Form For Get A JOB</h3>
+
+<form action="{% url 'registerdata' %}" method="post" class="form" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: auto; padding-top: 30px;" >
+    {% csrf_token %}
+    <div class="name" style="padding: 10px 0px 10px 0px;">
+        <label for="name">Enter Your Name:</label>
+        <input type="text" id="name" name="Name" ">
+    </div>  
+    <div class="gender " style="padding: 10px 0px 10px 0px;">
+        <label for="male">Male</label>
+        <input type="radio" name="gender" value="male" id="male">
+        
+        <label for="female">Female</label>
+        <input type="radio" name="gender" value="female" id="female" >
+    </div>
+    <div class="address" style="padding: 10px 0px 10px 0px;">
+        <label for="address">Enter Your Address:</label>
+        <textarea name="address" id="address" name="address"> </textarea>
+    </div>  
+    <div class="phn" style="padding: 10px 0px 10px 0px;">
+
+        <label for="phn">Enter Your Ph Num:</label>
+        <input type="number" name="contactno" id="phn">
+        
+    </div>
+    <div class="email" style="padding: 10px 0px 10px 0px;">
+        <label for="email">Enter Your Email:</label>
+        <input type="email" name="email" id="email">
+    </div>
+
+    <div class="qualification" style="padding: 10px 0px 10px 0px;">
+        <label for="qualification">Enter Your Qualification:</label>
+        <input type="text" name="qulification" id="qualification">
+    </div>
+
+    <div class="experience" style="padding: 10px 0px 10px 0px;">
+        <label for="experience">Enter Your Experience:</label>
+        <input type="text" name="exp" id="experience">
+    </div>
+
+    <!-- <div class="key_skill" style="padding: 10px 0px 10px 0px;">
+        <label for="key_skill">Ente You Key Skills:</label>
+        <input type="text" name="keyskill" id="key_skill">
+    </div> -->
+
+    <div class="dob" style="padding: 10px 0px 10px 0px;">
+        <label for="dob">Enter Your DOB:</label>
+        <input type="date" name="dob" id="dob">
+    </div>
+
+    <div class="aadharnum" style="padding: 10px 0px 10px 0px;">
+        <label for="aadharnum">Enter Your Adhaar Num:</label>
+        <input type="text" name="aadhaar" id="aadharnum">
+    </div>
+
+    <!-- <div class="reg_date" style="padding: 10px 0px 10px 0px;">
+        <label for="reg_date">Registration Date:</label>
+        <input type="date" name="regdate" id="reg_data">
+    </div> -->
+
+
+     <button value="submit" style="width: 80px; height: 25px; color: white; background-color: black; border: 1px solid rgb(255, 0, 0);">Register</button>
+
+</form>
+
+
+{% endblock %}

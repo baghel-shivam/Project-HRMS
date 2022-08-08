@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            margin: 10px 10%;
+        }
+        .navbar{
+            height: auto;
+            width: 100%;
+            display: flex;
+        }
+        .logo{
+            height: 150px;
+            width: 14%;
+        }
+        .logo img{
+            height: 100%;
+            width: 100%;
+        }
+        .banner{
+            height: auto;
+            width: 90%;
+            background-color: navy;
+            /* border: 2px solid red; */
+            font-size: 50px;
+            text-align: center;
+            line-height: 100px;
+            color: white;
+        }
+        .menu-bar{
+            margin: 5px 0px;
+            height:45px;
+            /* border: 2px solid red; */
+            display: flex;
+            background-color: white;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            font-style: bold;
+
+
+        }
+        .menu-bar li{
+            list-style: none;
+        }
+        .menu-bar li a{
+            text-decoration: none;
+            padding: 0px 30px;
+            color: black;
+        }
+        .main-body{
+            height: 100vh;
+            background-color: white;
+            text-align: center;
+            line-height: 100px;
+            /* justify-content: center; */
+        }
+        .footer{
+            margin: 5px 0px;
+            background-color: navy;
+            height:100px;
+            display: flex;
+        }
+        .left-footer{
+            background-color: white;
+            width: 50%;
+            font-size: 30px;
+            color: red;
+            text-align: center;
+            line-height: 100px;
+        }
+        .right-footer{
+            background-color: navy;
+            width: 50%;
+            font-size: 30px;
+            color: white;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+
+   {% load static %}
+</head>
+<body bgcolor="green">
+    <div class="navbar">
+        <div class="logo">
+            <img src="{% static 'images/logo.png' %}" alt="">
+        </div>
+        <div class="banner">
+            Welcome to Admin Zone
+
+        </div>
+
+    </div>
+    <div class="menu-bar">
+        <li><a href="# ">Home</a></li>
+        <li><a href="# ">Enquiry</a></li>
+        <li><a href="# ">Job Seeker</a></li>
+        <li><a href="# ">Employee</a></li>
+        <li><a href="# ">Change Password</a></li>
+        <li><a href="# ">Logout</a></li>
+    </div>
+    <div class="main-body">
+        This Is Admin Home Page
+    </div>
+    <div class="footer">
+        <div class="right-footer">
+            &copy; Copyright 2022-2023 
+        </div>
+        <div class="left-footer">
+            Developed by Shivam Singh
+        </div>
+    </div>
+</body>
+</html>

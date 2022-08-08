@@ -1,0 +1,26 @@
+{% extends "main.html" %}
+{% block body %}
+
+{% if msg %}
+     <p>{{msg}}</p>
+{% endif %}
+<h2 style=" text-align: center; color: red;" > Admin Login</h2>
+<form action="{% url 'adminlogin' %}" method="post">
+    {% csrf_token %}
+    <div class="login" style="display: flex; flex-direction: column; height: auto; width: auto; align-items: center;">
+        <div style="margin: 10px 0px;">
+        <label for="userId"> User ID:</label>
+        <input type="text" id="userId" style="margin: 0px 0px 0px 8px; height: 20px;" name="userId">
+        </div>
+
+        <div style="margin: 10px 0px;">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" style="height: 20px" name="pass">
+        </div>
+        <div>
+        <button value="submit" style="width: 50px; height:30px;">Login</button>
+        </div>
+    </div>  
+</form>
+{% endblock %}
